@@ -273,7 +273,7 @@ alias mkdir='mkdir -p '
 
 # dotfile commands
 alias config="/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME" 
-alias common_cfg="/usr/bin/git --git-dir=$HOME/.dotfiles-common.git  --work-tree=$HOME"
+alias config_common="/usr/bin/git --git-dir=$HOME/.dotfiles-common.git  --work-tree=$HOME"
 
 # dconf aliases
 alias backup_dconf="dconf dump / > $HOME/.backup/backup.dconf"
