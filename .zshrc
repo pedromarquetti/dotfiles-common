@@ -276,8 +276,9 @@ alias config="/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME"
 alias config_common="/usr/bin/git --git-dir=$HOME/.dotfiles-common.git  --work-tree=$HOME"
 
 # dconf aliases
-alias backup_dconf="dconf dump / > $HOME/.backup/backup.dconf"
-alias dconf_restore="dconf load / < $HOME/.backup/backup.dconf"
+source $HOME/.local/bin/common_funcs.sh
+# alias backup_dconf="dconf dump / > $HOME/.backup/backup.dconf"
+# alias dconf_restore="dconf load / < $HOME/.backup/backup.dconf"
 
 # fnm - Fast Node Manager
 # NOTE: https://github.com/Schniz/fnm

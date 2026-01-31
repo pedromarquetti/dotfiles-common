@@ -32,7 +32,7 @@ files=("git" "wget" "curl" "gcc" "python3" )
 all_executable=true
 
 for f in "${files[@]}"; do
-    if [[ ! -x "$f" ]]; then
+    if [[ ! -x "/usr/bin/$f" ]]; then
 	print_red "$f is not executable"
 	all_executable=false
     fi
@@ -42,6 +42,8 @@ if [[ "$all_executable" == false ]]; then
 
     print_red "not all files are executable! Exiting"
     exit 2
+else 
+    print_green "Checks ok! Continuing"
 fi
 
 
