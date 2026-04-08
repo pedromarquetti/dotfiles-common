@@ -249,7 +249,6 @@ if [[ $TERM == "xterm-kitty" ]]; then
     alias ssh='kitten ssh '
 fi
 
-alias btop='~/Documents/programming/c/btop/bin/btop'
 
 # enable color support of ls, less and man, and also add handy aliases
 alias l='ls -l --color=auto'
