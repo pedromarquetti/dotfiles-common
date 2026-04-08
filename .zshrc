@@ -179,7 +179,7 @@ ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=magenta
 ZSH_HIGHLIGHT_STYLES[back-dollar-quoted-argument]=fg=magenta
 ZSH_HIGHLIGHT_STYLES[assign]=none
 ZSH_HIGHLIGHT_STYLES[redirection]=fg=blue,bold
-ZSH_HIGHLIGHT_STYLES[comment]=fg=black,bold
+ZSH_HIGHLIGHT_STYLES[comment]=fg=cyan,bold
 ZSH_HIGHLIGHT_STYLES[named-fd]=none
 ZSH_HIGHLIGHT_STYLES[numeric-fd]=none
 ZSH_HIGHLIGHT_STYLES[arg0]=fg=green
@@ -245,6 +245,12 @@ fi
 
 #### custom aliases ayyy ####
 
+if [[ $TERM == "xterm-kitty" ]]; then
+    alias ssh='kitten ssh '
+fi
+
+alias btop='~/Documents/programming/c/btop/bin/btop'
+
 # enable color support of ls, less and man, and also add handy aliases
 alias l='ls -l --color=auto'
 alias la='ls -A --color=auto'
@@ -290,4 +296,3 @@ fi
 
 
 
-. "$HOME/.local/share/../bin/env"
