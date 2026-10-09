@@ -106,7 +106,6 @@
 		"csharp": "cd $dir && dotnet run"
 	},
 	"editor.wordWrap": "on",
-
 	"[python]": {
 		"editor.formatOnType": true,
 		"editor.defaultFormatter": "ms-python.autopep8"
@@ -115,11 +114,12 @@
 		"editor.defaultFormatter": "rust-lang.rust-analyzer"
 	},
 	"rust-analyzer.inlayHints.parameterHints.enable": false,
-
 	"[dart]": {
 		"editor.formatOnSave": true,
 		"editor.formatOnType": true,
-		"editor.rulers": [80],
+		"editor.rulers": [
+			80
+		],
 		"editor.selectionHighlight": false,
 		"editor.suggest.snippetsPreventQuickSuggestions": false,
 		"editor.suggestSelection": "first",
@@ -195,9 +195,12 @@
 	"[csharp]": {
 		"editor.defaultFormatter": "ms-dotnettools.csharp"
 	},
-	"gitlens.ai.model": "vscode",
-	"gitlens.ai.vscode.model": "copilot:gpt-4.1",
 	"[jsonc]": {
 		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"vscode-neovim.neovimInitVimPaths.linux": "/home/phlm/.config/nvim",
+	"java.configuration.runtimes": [],
+	"[java]": {
+		"editor.defaultFormatter": "Oracle.oracle-java"
 	}
 }

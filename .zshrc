@@ -122,7 +122,10 @@ zstyle ':autocomplete:*' min-input 1 # Wait until 1 character have been typed, b
 zstyle ':autocomplete:*' min-delay 1.0 # seconds (float)
 
 # custom prompt
-PROMPT='${vcs_info_msg_0_}%F{green}%~ %F{white}%(!.#.$) '
+# PROMPT='${vcs_info_msg_0_}%F{green}%~ %F{white}%(!.#.$) '
+
+# start with INSERT mode
+PROMPT='${vcs_info_msg_0_}%F{green}%~ %F{white}%(!.#.$) %K{#6fde57}%F{black}I%k%f  '
 RPROMPT='%F{green}%(?.√.%F{red}error code %?)%f %F{green}%n%F{white}'
 
 
@@ -213,14 +216,6 @@ export LESS_TERMCAP_ue=$'\E[0m'     # reset underline
 function updater() {
     RED='\033[0;31m'
     NC='\033[0m' # No Color
-    printf "${RED}apt update:${NC} \n" &&
-    sudo apt update &&
-    printf "${RED}upgrading:${NC} \n" &&
-    sudo apt upgrade --allow-downgrades --yes &&
-    printf "${RED}upgrading dist:${NC} \n" &&
-    sudo apt dist-upgrade --yes --allow-downgrades &&
-    printf "${RED}autoremove\n${NC}"
-    sudo apt autoremove --yes &&
     printf "${RED}updating flatpak:${NC} \n" &&
     flatpak -y update &&
     printf "${RED}upgrading flatpak:${NC} \n" &&
@@ -230,25 +225,12 @@ function updater() {
 
 }
 
-# fix for an TILIX error i was having
-if [[ -f /usr/bin/tilix || -f /bin/tilix ]]; then
-    
-    if [[ ! -f /etc/profile.d/vte.sh ]]; then
-        echo "/etc/profile.d/vte.sh not found!!! tilix will throw an err... "
-        echo "running 'sudo ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh'"
-        sudo ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
-    fi
-    if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-        source /etc/profile.d/vte.sh
-    fi
-fi
-
 #### custom aliases ayyy ####
-
 if [[ $TERM == "xterm-kitty" ]]; then
     alias ssh='kitten ssh '
+    alias icat='kitten icat '
+    alias copy='kitten clipboard'
 fi
-
 
 # enable color support of ls, less and man, and also add handy aliases
 alias l='ls -l --color=auto'
@@ -280,10 +262,8 @@ alias mkdir='mkdir -p '
 alias config="/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME" 
 alias config_common="/usr/bin/git --git-dir=$HOME/.dotfiles-common.git  --work-tree=$HOME"
 
-# dconf aliases
+# dconf aliases / common functions
 source $HOME/.local/bin/common_funcs.sh
-# alias backup_dconf="dconf dump / > $HOME/.backup/backup.dconf"
-# alias dconf_restore="dconf load / < $HOME/.backup/backup.dconf"
 
 # fnm - Fast Node Manager
 # NOTE: https://github.com/Schniz/fnm
@@ -295,3 +275,6 @@ fi
 
 
 
+
+# opencode
+export PATH=/home/phlm/.opencode/bin:$PATH

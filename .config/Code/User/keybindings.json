@@ -16,7 +16,7 @@
 		"command": "-code-runner.run"
 	},
 	{
-		"key": "alt+'",
+		"key": "ctrl+alt+'",
 		"command": "workbench.action.terminal.newInActiveWorkspace"
 	},
 	{
@@ -50,16 +50,6 @@
 	{
 		"key": "ctrl+e",
 		"command": "-workbench.action.quickOpen"
-	},
-	{
-		"key": "ctrl+e",
-		"command": "workbench.view.explorer",
-		"when": "viewContainer.workbench.view.explorer.enabled"
-	},
-	{
-		"key": "ctrl+shift+e",
-		"command": "-workbench.view.explorer",
-		"when": "viewContainer.workbench.view.explorer.enabled"
 	},
 	{
 		"key": "ctrl+n",
@@ -204,5 +194,75 @@
 	{
 		"key": "ctrl+k ctrl+\\",
 		"command": "-workbench.action.splitEditorUp"
+	},
+	{
+		"key": "ctrl+d ctrl+s",
+		"command": "workbench.action.gotoSymbol",
+		"when": "!accessibilityHelpIsShown && !accessibleViewIsShown"
+	},
+	{
+		"key": "ctrl+shift+o",
+		"command": "-workbench.action.gotoSymbol",
+		"when": "!accessibilityHelpIsShown && !accessibleViewIsShown"
+	},
+	{
+		"key": "ctrl+w ctrl+s",
+		"command": "workbench.action.showAllSymbols"
+	},
+	{
+		"key": "ctrl+t",
+		"command": "-workbench.action.showAllSymbols"
+	},
+	{
+		"key": "ctrl+q",
+		"command": "-workbench.action.quit"
+	},
+	{
+		"key": "alt+o alt+t",
+		"command": "workbench.action.terminal.toggleTerminal",
+		"when": "terminal.active"
+	},
+	{
+		"key": "ctrl+shift+[BracketLeft]",
+		"command": "-workbench.action.terminal.toggleTerminal",
+		"when": "terminal.active"
+	},
+	{
+		"key": "alt+o alt+p",
+		"command": "workbench.actions.view.problems",
+		"when": "workbench.panel.markers.view.active"
+	},
+	{
+		"key": "ctrl+shift+m",
+		"command": "-workbench.actions.view.problems",
+		"when": "workbench.panel.markers.view.active"
+	},
+	{
+		"key": "alt+o alt+d",
+		"command": "workbench.debug.action.toggleRepl",
+		"when": "workbench.panel.repl.view.active"
+	},
+	{
+		"key": "ctrl+shift+y",
+		"command": "-workbench.debug.action.toggleRepl",
+		"when": "workbench.panel.repl.view.active"
+	},
+	{
+		"key": "alt+d alt+q",
+		"command": "workbench.action.closeActiveEditor"
+	},
+	{
+		"key": "ctrl+w",
+		"command": "-workbench.action.closeActiveEditor"
+	},
+	{
+		"key": "alt+d alt+f",
+		"command": "editor.action.formatDocument",
+		"when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+	},
+	{
+		"key": "ctrl+shift+i",
+		"command": "-editor.action.formatDocument",
+		"when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
 	}
 ]
