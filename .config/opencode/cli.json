@@ -1,0 +1,44 @@
+{
+  "$schema": "https://opencode.ai/v2/cli.json",
+  "theme": {
+    "name": "nightowl"
+  },
+  "keybinds": {
+    "leader": "ctrl+space",
+    "agent.cycle": "tab",
+    "session.tab.next": ["<leader>tab","<leader>k"],
+    "session.tab.previous": ["<leader>j"],
+    "command.palette.show": "ctrl+p"
+  },
+  "leader": {
+    "timeout": 2000
+  },
+  "scroll": {
+    "speed": 3,
+    "acceleration": false
+  },
+  "attention": {
+    "enabled": true,
+    "notifications": true,
+    "sound": true,
+    "volume": 0.4,
+    "sound_pack": "opencode.default",
+    "sounds": {
+      "error": "./sounds/error.mp3"
+    }
+  },
+  "diffs": {
+    "wrap": "word"
+  },
+  "session": {
+    "sidebar": "auto",
+    "scrollbar": false,
+    "thinking": "hide"
+  },
+  "animations": true,
+  "mouse": true,
+  "cursor": {
+    "style": "block",
+    "blinking": true
+  }
+}
