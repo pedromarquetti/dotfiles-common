@@ -6,8 +6,12 @@
   "keybinds": {
     "leader": "ctrl+space",
     "agent.cycle": "tab",
-    "session.tab.next": ["<leader>tab","<leader>k"],
+    "session.tab.next": ["<leader>tab", "<leader>k"],
     "session.tab.previous": ["<leader>j"],
+    "session.line.up": ["alt+k"],
+    "session.line.down": ["alt+j"],
+    "pane.focus.left": ["<leader>left", "<leader>h"],
+    "pane.focus.right": ["<leader>right","<leader>l"],
     "command.palette.show": "ctrl+p"
   },
   "leader": {
